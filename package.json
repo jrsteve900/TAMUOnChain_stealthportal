@@ -1,0 +1,13 @@
+{
+  "name": "tamuonchain-stealthportal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "vitest --run --environment jsdom",
+    "lint": "echo 'No lint configured yet'"
+  },
+  "devDependencies": {
+    "jsdom": "^29.0.0",
+    "vitest": "^1.5.4"
+  }
+}

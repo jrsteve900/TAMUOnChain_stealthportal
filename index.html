@@ -1,1 +1,53 @@
-[SUPERCHARGED CODE HERE]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TAMU Stealth Portal</title>
+  <style>
+    body { font-family: Inter, system-ui, sans-serif; margin: 0; padding: 1.25rem; background: #040d1e; color: #e2e8f0; }
+    .card { margin: 0.75rem 0; padding: 1rem; border-radius: 0.75rem; border: 1px solid rgba(148,163,184,.2); background:#0b1630; }
+    button { cursor:pointer; border:none; border-radius: 0.5rem; padding: .55rem 0.95rem; background:#1d4ed8;color:#fff; }
+    input, button:hover { filter: brightness(1.1); }
+    .badge { background:#2563eb; color:#fff; border-radius:.4rem; padding:.1rem .5rem; font-size:.8rem; }
+    iframe { border:0; width:100%; min-height:420px; margin-top:.5rem; }
+    a { color: #60a5fa; }
+  </style>
+</head>
+<body>
+  <h1>TAMU Stealth Portal</h1>
+  <div class="card">
+    <h2>1. LP Countdown Timer 🔥</h2>
+    <p id="countdown">Loading countdown...</p>
+    <p><small>Target launch is <span id="targetDate"></span></small></p>
+  </div>
+
+  <div class="card">
+    <h2>2. Whitelist Checker 🔒</h2>
+    <button id="connectWallet">Connect Wallet</button>
+    <p id="walletAddr">Wallet: not connected</p>
+    <p id="whitelistStatus">No check yet</p>
+  </div>
+
+  <div class="card">
+    <h2>3. Add Token to MetaMask</h2>
+    <button id="addToken">Add TAMU to MetaMask</button>
+    <p id="addTokenStatus"></p>
+  </div>
+
+  <div class="card">
+    <h2>4. Transaction History</h2>
+    <button id="refreshHistory">Refresh Tx History</button>
+    <ul id="txHistory"></ul>
+  </div>
+
+  <div class="card">
+    <h2>5. Price Chart</h2>
+    <div id="priceChartContainer"></div>
+  </div>
+
+  <script src="https://cdn.ethers.io/lib/ethers-5.7.2.min.js" integrity="sha384-/7S5Vz5Hyv0Qn8DddI7pVNYezvK24L5GGtx5G+oAfShVBEUrlIjzC1cZ0P5Q1jmn" crossorigin="anonymous"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
